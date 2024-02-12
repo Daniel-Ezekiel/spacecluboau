@@ -18,6 +18,12 @@ const config = {
       },
     },
     extend: {
+      colors: {
+        primary: {
+          dark: "#161819",
+          gold: "#c29559",
+        },
+      },
       fontFamily: {
         manrope: ["Manrope", "sans-serif"],
         raleway: ["Raleway", "sans-serif"],
@@ -42,3 +48,4 @@ const config = {
 } satisfies Config;
 
 export default config;
+

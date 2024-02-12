@@ -1,3 +1,6 @@
+import Header from "../_components/Header";
+import Footer from "../_components/Footer";
+
 export default function MainLayout({
   children,
 }: {
@@ -5,11 +8,11 @@ export default function MainLayout({
 }) {
   return (
     <>
-      <header>Header</header>
-      <main className='flex min-h-screen flex-col items-center justify-between p-24'>
+      <Header />
+      <main className='flex  flex-col items-center justify-between p-24'>
         Main Content{children}
       </main>
-      <footer>Footer</footer>
+      <Footer />
     </>
   );
 }
