@@ -21,7 +21,9 @@ const config = {
       colors: {
         primary: {
           dark: "#161819",
-          gold: "#c29559",
+          gray: "#cbcbcb",
+          "gold-light": "#bc9159",
+          "gold-dark": "#c29559",
         },
       },
       fontFamily: {
