@@ -27,7 +27,7 @@ export default function RootLayout({
       <head>
         <link rel='icon' href='/logo-white.png' />
       </head>
-      <body className='font-manrope'>{children}</body>
+      <body className='font-manrope md:text-lg'>{children}</body>
     </html>
   );
 }

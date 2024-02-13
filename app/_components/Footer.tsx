@@ -13,7 +13,7 @@ import {
 export default function Footer() {
   return (
     <footer className='bg-primary-dark py-12 leading-6 xl:leading-8'>
-      <div className='max-w-[75rem] mx-auto p-4 py-10 grid gap-10 text-white md:grid-cols-2 lg:grid-cols-6'>
+      <div className='max-w-[77.5rem] mx-auto p-4 py-10 grid gap-10 text-white md:grid-cols-2 lg:grid-cols-6'>
         <section className='flex flex-col gap-3'>
           <h2 className='text-primary-gold-light font-raleway font-medium text-xl'>
             Quick Links
@@ -52,7 +52,11 @@ export default function Footer() {
           </h2>
           <ul className='flex flex-col gap-3 lg:items-end'>
             <li>
-              <a href='http://' className='flex items-center gap-2'>
+              <a
+                href='http://'
+                className='flex items-center gap-2'
+                target='_blank'
+              >
                 <IoLocation size={24} color='#bc9159' /> Opposite Ajose Lecture
                 Theatre, OAU, Ife.
               </a>
@@ -83,6 +87,7 @@ export default function Footer() {
               </a>
               <a
                 href='https://x.com/spaceclub_oau'
+                target='_blank'
                 className='hover:animate-pulse'
               >
                 <IoLogoTwitter size={28} />

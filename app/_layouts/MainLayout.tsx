@@ -9,9 +9,7 @@ export default function MainLayout({
   return (
     <>
       <Header />
-      <main className='flex  flex-col items-center justify-between p-24'>
-        Main Content{children}
-      </main>
+      <main className='flex flex-col'>{children}</main>
       <Footer />
     </>
   );
