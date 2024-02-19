@@ -4,24 +4,24 @@ import InfoCard from "./_components/InfoCard";
 
 const aimsAndObjectives = [
   {
-    title: "Knowledge Exchange",
-    desc: "We aim to give students the opportunity to share acquired knowledge with their colleagues during club activities in a relaxing and fulfilling atmosphere.",
+    title: "Promotoing Awareness",
+    desc: "Space Club OAU conducts diverse events like workshops, seminars, and exhibitions to raise awareness about space science and technology among students. By showcasing practical applications and breakthroughs, the club ignites curiosity and appreciation for space-related fields, inspiring future scientists and engineers.",
   },
   {
-    title: "SST Sustainability",
-    desc: "Sustaining all efforts and resources (human and material) as well as other forms of investment in Space Science and Technology(SST)",
+    title: "STEM Capacity Building",
+    desc: "Through workshops, mentorship programs, and projects, Space Club OAU equips students with skills in science, technology, engineering, and mathematics (STEM). These initiatives empower students to deepen their understanding and pursue careers in space-related industries, ensuring a competent workforce for the future.",
   },
   {
-    title: "SST Empowerment",
-    desc: "Space Club OAU aims to inspire and educate youths and students alike to learn more about SPace Science and Technolofy and also about NIgeria's Space Program and its benefits.",
+    title: "Partnerships and Collaborations",
+    desc: "Establish partnerships and collaborations with the African Regional Center for Space Science and Technology Education (ARCSSTE) and other relevant organizations, both locally and internationally, to leverage resources and expertise for the advancement of space science education and research.",
   },
   {
     title: "Research-based Learning",
-    desc: "The promotion of research-based learning in Space Science and Technology through hands-on experience, practical project, audio-visuals and multimedia presentations of space exploration is important.",
+    desc: "Space Club OAU encourages students to explore new ideas and undertake research projects in space-related fields. By fostering creativity and experimentation, the club empowers students to develop solutions to real-world problems, contributing to the advancement of space science and technology.",
   },
   {
-    title: "Proper SST Education",
-    desc: "At Space Club, we also aim to address and eradicate teh misconceptions of the public about Space, Science and Technology arising from wrong information imbued over time from peers, colleagues, popular literature and general media.",
+    title: "Sensitizaton and Education",
+    desc: "Through educational programs and outreach activities, Space Club OAU educates students about the significance of space exploration and its impact on society. By promoting inclusivity and diversity in STEM education, the club empowers students to engage with complex issues and advocate for positive change in space-related fields.",
   },
 ];
 
@@ -93,14 +93,14 @@ export default function page() {
           </div>
         </div>
 
-        <div className='max-w-[77.5rem] mx-auto -mt-[10rem] p-4 sm:grid sm:grid-cols-2 lg:grid-cols-3'>
+        <div className='max-w-[77.5rem] mx-auto -mt-[10rem] p-4 sm:grid sm:grid-cols-2 sm:gap-6 lg:grid-cols-6'>
           {aimsAndObjectives.map((aim, i) => (
             <InfoCard
               key={i}
               cardTitle={aim.title}
               cardText={aim.desc}
-              cardSpan={i > 2 ? 2 : 1}
               cardIndex={i}
+              className={i > 2 ? "xl:col-span-3" : "xl:col-span-2"}
             />
           ))}
         </div>
