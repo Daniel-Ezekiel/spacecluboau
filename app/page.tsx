@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const aimsAndObjectives = [
   {
-    title: "Promotoing Awareness",
+    title: "Promoting Awareness",
     desc: "Space Club OAU conducts diverse events like workshops, seminars, and exhibitions to raise awareness about space science and technology among students. By showcasing practical applications and breakthroughs, the club ignites curiosity and appreciation for space-related fields, inspiring future scientists and engineers.",
   },
   {
@@ -98,7 +98,7 @@ export default function page() {
           <p className='mt-4'>
             Space Club OAU, as the brain-child of the African Regional Center
             for Space Science and Technology Education (ARCSSTE), was conceived
-            witht he prurpose fo achieving the &lsquo;Catching them Young&rsquo;
+            with the purpose of achieving the &lsquo;Catching them Young&rsquo;
             Initiative. Based on this, we are driven to continuously indulge in
             a sustained effort to sensitize, educate, inform and create
             awareness for students in tetiary institutions in all aspects of
@@ -116,7 +116,7 @@ export default function page() {
             <span>What do we hope to achieve?</span>
             <h2 className='mt-4 mb-2 text-3xl'>Our Aims and Objectives</h2>
             <p>
-              At Space Club, we are continuously driven to delive impactful
+              At Space Club, we are continuously driven to deliver impactful
               experiences that facilitate growth and development to all
               concerned.
             </p>
@@ -145,12 +145,12 @@ export default function page() {
 
           <div className='flex flex-col items-center gap-3 border border-primary-gold-light p-10 xl:px-7'>
             <h3 className='font-bold text-center text-5xl'>
-              11 <span className='block text-lg'>divisions</span>
+              11 <span className='block text-lg'>Divisions</span>
             </h3>
             <p className='text-center'>
-              From Rocketry, Space Policy and Law to Software Engineering, Dones
-              and General Aviation Systems, there are multiple divisions you
-              could join depending on your interests.
+              From Rocketry, Space Policy and Law to Software Engineering,
+              Drones and General Aviation Systems, there are multiple divisions
+              you could join depending on your interests.
             </p>
           </div>
 
@@ -160,25 +160,25 @@ export default function page() {
             </h3>
             <p className='text-center'>
               With over 50 Intellectuals from different fields, knowledge
-              acquisitiona and exchange happens consistently in a relaxed and
+              acquisition and exchange happens consistently in a relaxed and
               fulfilling atmosphere.
             </p>
           </div>
 
           <div className='flex flex-col items-center gap-3 border border-primary-gold-light p-10 xl:px-7'>
             <h3 className='font-bold text-center text-5xl'>
-              5+ <span className='block text-lg'>disciplines</span>
+              5+ <span className='block text-lg'>Disciplines</span>
             </h3>
             <p className='text-center'>
               In Space Club, there is space for everyone. We are spread out
               across different disciplines, from STEM to Social Sciences and
-              even the Arts. We definitely have space for you.
+              even the Arts. There is definitely enough space for you.
             </p>
           </div>
 
           <div className='flex flex-col items-center gap-3 border border-primary-gold-light p-10 xl:px-7'>
             <h3 className='font-bold text-center text-5xl'>
-              75+ <span className='block text-lg'>professionals</span>
+              75+ <span className='block text-lg'>Professionals</span>
             </h3>
             <p className='text-center'>
               Space Club members possess a variety of professional skillsets
@@ -199,9 +199,9 @@ export default function page() {
             <span>Why should you join Space Club? What do you gain?</span>
             <h2 className='mt-4 mb-2 text-3xl'>The Benefits</h2>
             <p>
-              By joining Space Ckub, you become a part of the family of
-              visionary individuals interested in facilitating you growth and
-              exploring that hidden potential you possess.
+              By joining Space Club, you become a part of the family of
+              visionary individuals interested in facilitating your growth and
+              exploring your hidden potential.
             </p>
           </div>
         </div>
