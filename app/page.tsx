@@ -48,11 +48,13 @@ export default function page() {
         </section>
       </div>
 
-      <section className='max-w-[77.5rem] mx-auto p-4 py-20'>
-        <div>
-          <h2 className='border-l-2 border-l-primary-gold-light pl-2 font-bold text-2xl capitalize'>
-            The Space Club Vision
-          </h2>
+      <section className='max-w-[77.5rem] mx-auto p-4 py-20 lg:px-20'>
+        <div className='mt-6 lg:flex gap-4'>
+          <div className='border-l-2 border-l-primary-gold-light flex items-center'>
+            <h2 className='pl-2 font-bold text-2xl capitalize lg:w-[13rem] lg:text-3xl'>
+              The Space Club Vision
+            </h2>
+          </div>
           <p className='mt-4'>
             Space Club OAU, a Non-Profit established by a group of visionary
             students to promote awareness around Space, Science and
@@ -61,10 +63,14 @@ export default function page() {
           </p>
         </div>
 
-        <div className='mt-6'>
-          <h2 className='border-l-2 border-l-primary-gold-light pl-2 font-bold text-2xl capitalize'>
-            Our mission
-          </h2>
+        <div className='hidden lg:block mt-12 mx-auto h-1 w-20  border-t-8 border-dotted border-primary-gold-dark'></div>
+
+        <div className='mt-6 lg:flex lg:flex-row-reverse gap-6'>
+          <div className='w-[20rem] border-l-2 border-l-primary-gold-light flex items-center lg:pr-8 lg:border-l-0 lg:border-r-2 lg:border-r-primary-gold-light lg:text-right'>
+            <h2 className='pl-2 font-bold text-2xl capitalize lg:text-3xl'>
+              Our mission
+            </h2>
+          </div>
           <p className='mt-4'>
             Space Club OAU, as the brain-child of the African Regional Center
             for Space Science and Technology Education (ARCSSTE), was conceived
@@ -100,7 +106,7 @@ export default function page() {
               cardTitle={aim.title}
               cardText={aim.desc}
               cardIndex={i}
-              className={i > 2 ? "xl:col-span-3" : "xl:col-span-2"}
+              className={i > 2 ? "lg:col-span-3" : "lg:col-span-2"}
             />
           ))}
         </div>
