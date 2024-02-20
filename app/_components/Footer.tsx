@@ -12,7 +12,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className='mt-28 bg-primary-dark py-12 leading-6 xl:leading-8'>
+    <footer className='bg-primary-dark py-12 leading-6 xl:leading-8'>
       <div className='max-w-[77.5rem] mx-auto p-4 py-10 grid gap-10 text-white md:grid-cols-2 lg:grid-cols-6'>
         <section className='flex flex-col gap-3'>
           <h2 className='text-primary-gold-light font-raleway font-medium text-xl'>
