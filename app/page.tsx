@@ -25,6 +25,29 @@ const aimsAndObjectives = [
   },
 ];
 
+const benefits = [
+  {
+    title: "Growth",
+    desc: "Space Club OAU engages in activities that will increase your capacity tremendously in things around space science and technology, philosophy and arts. At Space Club OAU, you will definitely develop your potential and unlock new opportunities for your success.",
+  },
+  {
+    title: "Community",
+    desc: "Here in Space Club OAU, you will build meaninful connections with like-minded peers, industry professionals and probably form your best squad thereby fostering a sense of belonging and collboration. The Club provides valuable network of support and encouragement for its members.",
+  },
+  {
+    title: "Skill Development",
+    desc: "Members of Space Club OAU have access to resources, training, and mentorship opportunities that facilitate skill development in STEM disciplines. Through practical projects, teamwork, and leadership roles, members can enhance their problem-solving abilities, critical thinking skills, and technical expertise, preparing them for future academic and professional endeavors.",
+  },
+  {
+    title: "Education and Awareness",
+    desc: "Space Club OAU promotes education and awareness about Space Science and Technology among its members and the wider community. Through educational events, outreach activities, and informational campaigns, we will help you know your role in Space, Science and Technology and stay informed about the latest developments and opportunities in the field, inspiring curiosity and interest in space-related topics.",
+  },
+  {
+    title: "Innovation and Research",
+    desc: "Joining Space Club OAU provides members with opportunities to engage in innovative research projects and exploration initiatives. By encouraging curiosity, experimentation, and creativity, the club empowers members to explore new ideas, develop groundbreaking technologies, and contribute to the advancement of space science and technology through their research endeavors.",
+  },
+];
+
 export default function page() {
   return (
     <MainLayout>
@@ -83,7 +106,7 @@ export default function page() {
         </div>
       </section>
 
-      <section>
+      <section className='mb-28'>
         <div
           style={{ backgroundImage: "url(/space1.webp)" }}
           className='bg-no-repeat bg-cover bg-center py-[10rem]'
@@ -101,6 +124,89 @@ export default function page() {
 
         <div className='max-w-[77.5rem] mx-auto -mt-[10rem] p-4 sm:grid sm:grid-cols-2 sm:gap-6 lg:grid-cols-6'>
           {aimsAndObjectives.map((aim, i) => (
+            <InfoCard
+              key={i}
+              cardTitle={aim.title}
+              cardText={aim.desc}
+              cardIndex={i}
+              className={i > 2 ? "lg:col-span-3" : "lg:col-span-2"}
+            />
+          ))}
+        </div>
+      </section>
+
+      <section className='bg-primary-dark text-white'>
+        <div className='max-w-[77.5rem] mx-auto p-4 py-[5.5rem] grid gap-6 text-base sm:grid-cols-2 xl:grid-cols-4'>
+          <p className='my-4 text-2xl text-center sm:col-span-full'>
+            not just space enthusiasts, we are{" "}
+            <span className='font-bold'>THE</span> Commmunity!
+          </p>
+
+          <div className='flex flex-col items-center gap-3 border border-primary-gold-light p-10 xl:px-7'>
+            <h3 className='font-bold text-center text-5xl'>
+              11 <span className='block text-lg'>divisions</span>
+            </h3>
+            <p className='text-center'>
+              From Rocketry, Space Policy and Law to Software Engineering, Dones
+              and General Aviation Systems, there are multiple divisions you
+              could join depending on your interests.
+            </p>
+          </div>
+
+          <div className='flex flex-col items-center gap-3 border border-primary-gold-light p-10 xl:px-7'>
+            <h3 className='font-bold text-center text-5xl'>
+              50+ <span className='block text-lg'>Intellectuals</span>
+            </h3>
+            <p className='text-center'>
+              With over 50 Intellectuals from different fields, knowledge
+              acquisitiona and exchange happens consistently in a relaxed and
+              fulfilling atmosphere.
+            </p>
+          </div>
+
+          <div className='flex flex-col items-center gap-3 border border-primary-gold-light p-10 xl:px-7'>
+            <h3 className='font-bold text-center text-5xl'>
+              5+ <span className='block text-lg'>disciplines</span>
+            </h3>
+            <p className='text-center'>
+              In Space Club, there is space for everyone. We are spread out
+              across different disciplines, from STEM to Social Sciences and
+              even the Arts. We definitely have space for you.
+            </p>
+          </div>
+
+          <div className='flex flex-col items-center gap-3 border border-primary-gold-light p-10 xl:px-7'>
+            <h3 className='font-bold text-center text-5xl'>
+              75+ <span className='block text-lg'>professionals</span>
+            </h3>
+            <p className='text-center'>
+              Space Club members possess a variety of professional skillsets
+              through which many have built and are building a career. There are
+              no idle hands in Space Club as we are a focused and committed
+              group on individuals.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className='mb-28'>
+        <div
+          style={{ backgroundImage: "url(/space1.jpg)" }}
+          className='bg-no-repeat bg-cover bg-center py-[10rem]'
+        >
+          <div className='max-w-[50rem] mx-auto p-4 text-center text-white'>
+            <span>Why should you join Space Club? What do you gain?</span>
+            <h2 className='mt-4 mb-2 text-3xl'>The Benefits</h2>
+            <p>
+              By joining Space Ckub, you become a part of the family of
+              visionary individuals interested in facilitating you growth and
+              exploring that hidden potential you possess.
+            </p>
+          </div>
+        </div>
+
+        <div className='max-w-[77.5rem] mx-auto -mt-[10rem] p-4 sm:grid sm:grid-cols-2 sm:gap-6 lg:grid-cols-6'>
+          {benefits.map((aim, i) => (
             <InfoCard
               key={i}
               cardTitle={aim.title}
