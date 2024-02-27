@@ -27,17 +27,20 @@ export default function Header() {
             <Link href='/'>Home</Link>
           </li>
           <li className='py-2'>
-            <Link href='/'>About</Link>
+            <Link href='/about'>About</Link>
           </li>
           <li className='py-2'>
-            <Link href='/'>Contact</Link>
+            <Link href='/contact'>Contact</Link>
           </li>
         </ul>
 
         <div className='flex items-center gap-3 lg:ml-6'>
-          <button className='bg-primary-gold-light p-2 px-4 rounded-lg uppercase tracking-wider text-white font-semibold active:scale-90 transition-transform ease-in-out duration-100 text-sm max-[345px]:hidden'>
+          <Link
+            href={"/contact"}
+            className='bg-primary-gold-light p-2 px-4 rounded-lg uppercase tracking-wider text-white font-semibold active:scale-90 transition-transform ease-in-out duration-100 text-sm max-[345px]:hidden'
+          >
             Join us!
-          </button>
+          </Link>
 
           <Button
             onClick={() => setShowNav(!showNav)}
