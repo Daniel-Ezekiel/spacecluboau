@@ -21,7 +21,7 @@ export default function Header() {
         <ul
           className={`fixed ${
             showNav ? "right-0" : "right-[-100%]"
-          } top-[4.5rem] p-4 pl-8 z-30 flex flex-col gap-4 w-[65dvw] h-screen bg-black bg-opacity-20 backdrop-blur transition-all ease-in-out duration-500 shadow-2xl lg:static lg:w-fit lg:h-fit lg:ml-auto lg:flex-row lg:gap-12`}
+          } top-[4.5rem] p-4 pl-8 z-30 flex flex-col gap-4 w-[65dvw] h-screen bg-black bg-opacity-20 backdrop-blur transition-all ease-in-out duration-500 shadow-2xl lg:static lg:w-fit lg:h-fit lg:ml-auto lg:flex-row lg:gap-12 lg:bg-transparent lg:shadow-none lg:p-0`}
         >
           <li className='py-2'>
             <Link href='/'>Home</Link>

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
       new URL("/logo-black.png", "https://spaceclub-oau.vercel.app"),
       { url: "/logo-white.png", media: "(prefers-color-scheme: dark)" },
     ],
-    shortcut: ["/logo-white.png"],
+    shortcut: ["/logo-black.png"],
   },
 };
 

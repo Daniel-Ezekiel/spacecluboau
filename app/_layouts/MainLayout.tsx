@@ -7,10 +7,10 @@ export default function MainLayout({
   children: React.ReactNode | React.ReactNode[] | null;
 }) {
   return (
-    <>
+    <div className='flex flex-col'>
       <Header />
       <main className='flex flex-col'>{children}</main>
       <Footer />
-    </>
+    </div>
   );
 }
