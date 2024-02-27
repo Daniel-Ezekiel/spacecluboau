@@ -5,7 +5,7 @@ export default function About() {
     <section className='max-w-[77.5rem] mx-auto p-4 py-20 lg:px-20'>
       <div className='mt-6 lg:flex gap-4'>
         <div className='border-l-2 border-l-primary-gold-light flex items-center'>
-          <h2 className='pl-2 font-bold text-2xl capitalize lg:w-[13rem] lg:text-3xl'>
+          <h2 className='w-full pl-2 font-bold text-2xl capitalize lg:w-[13rem] lg:text-3xl'>
             The Space Club Vision
           </h2>
         </div>
@@ -20,8 +20,8 @@ export default function About() {
       <div className='hidden lg:block mt-12 mx-auto h-1 w-20  border-t-8 border-dotted border-primary-gold-dark'></div>
 
       <div className='mt-6 lg:flex lg:flex-row-reverse gap-6'>
-        <div className='w-[20rem] border-l-2 border-l-primary-gold-light flex items-center lg:pr-8 lg:border-l-0 lg:border-r-2 lg:border-r-primary-gold-light lg:text-right'>
-          <h2 className='pl-2 font-bold text-2xl capitalize lg:text-3xl'>
+        <div className='max-w-[20rem] border-l-2 border-l-primary-gold-light flex items-center lg:pr-8 lg:border-l-0 lg:border-r-2 lg:border-r-primary-gold-light lg:text-right'>
+          <h2 className='w-fit pl-2 font-bold text-2xl capitalize lg:text-3xl'>
             Our mission
           </h2>
         </div>

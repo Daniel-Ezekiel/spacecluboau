@@ -1,5 +1,5 @@
 import React from "react";
-import InfoCard from "../InfoCard";
+import InfoCard from "./InfoCard";
 import { aimsProps } from "@/app/_types/types";
 
 export default function AimsAndObjectives({

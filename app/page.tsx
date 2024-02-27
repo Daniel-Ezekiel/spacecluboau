@@ -1,6 +1,6 @@
 import React from "react";
 import MainLayout from "./_layouts/MainLayout";
-import InfoCard from "./_components/InfoCard";
+import InfoCard from "./_components/home/InfoCard";
 import Link from "next/link";
 import Hero from "./_components/home/Hero";
 import About from "./_components/home/About";
