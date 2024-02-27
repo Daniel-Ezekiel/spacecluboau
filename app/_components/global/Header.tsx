@@ -35,7 +35,7 @@ export default function Header() {
         </ul>
 
         <div className='flex items-center gap-3 lg:ml-6'>
-          <button className='bg-primary-gold-light p-2 px-4 rounded-lg uppercase tracking-wider text-white font-semibold active:scale-90 transition-transform ease-in-out duration-100'>
+          <button className='bg-primary-gold-light p-2 px-4 rounded-lg uppercase tracking-wider text-white font-semibold active:scale-90 transition-transform ease-in-out duration-100 text-sm max-[345px]:hidden'>
             Join us!
           </button>
 
