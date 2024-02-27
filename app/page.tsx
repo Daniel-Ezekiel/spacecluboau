@@ -2,6 +2,12 @@ import React from "react";
 import MainLayout from "./_layouts/MainLayout";
 import InfoCard from "./_components/InfoCard";
 import Link from "next/link";
+import Hero from "./_components/home/Hero";
+import About from "./_components/home/About";
+import AimsAndObjectives from "./_components/home/AimsAndObjectives";
+import Features from "./_components/home/Features";
+import Benefits from "./_components/home/Benefits";
+import Contact from "./_components/global/Contact";
 
 const aimsAndObjectives = [
   {
@@ -52,186 +58,12 @@ const benefits = [
 export default function page() {
   return (
     <MainLayout>
-      <div
-        style={{ backgroundImage: "url('/space2.jpg')" }}
-        className='relative pt-[15rem] bg-no-repeat bg-cover bg-center before:absolute before:top-0 before:left-0 before:h-full before:w-full before:bg-black before:bg-opacity-40'
-      >
-        <section className='relative p-4 pt-[8rem] pb-[8rem] max-w-[75rem] h-full mx-auto z-10 text-white'>
-          <div className='max-w-[25rem] xl:max-w-[30rem]'>
-            <h1 className='flex flex-col gap-2 font-raleway font-black text-3xl xl:text-5xl'>
-              we are{" "}
-              <span className='w-fit p-2 px-4 rounded-2xl bg-primary-gray text-primary-dark'>
-                SpaceClub OAU
-              </span>
-            </h1>
-            <p className='mt-3'>
-              Join us today! Let us be your guide on your journey through this
-              vastness called Space.
-            </p>
-          </div>
-        </section>
-      </div>
-
-      <section className='max-w-[77.5rem] mx-auto p-4 py-20 lg:px-20'>
-        <div className='mt-6 lg:flex gap-4'>
-          <div className='border-l-2 border-l-primary-gold-light flex items-center'>
-            <h2 className='pl-2 font-bold text-2xl capitalize lg:w-[13rem] lg:text-3xl'>
-              The Space Club Vision
-            </h2>
-          </div>
-          <p className='mt-4'>
-            Space Club OAU, a Non-Profit established by a group of visionary
-            students to promote awareness around Space, Science and
-            Technology(SST) and to also build STEM capacity in Nigerian
-            Universities particularly Obafemi Awolowo University(OAU).
-          </p>
-        </div>
-
-        <div className='hidden lg:block mt-12 mx-auto h-1 w-20  border-t-8 border-dotted border-primary-gold-dark'></div>
-
-        <div className='mt-6 lg:flex lg:flex-row-reverse gap-6'>
-          <div className='w-[20rem] border-l-2 border-l-primary-gold-light flex items-center lg:pr-8 lg:border-l-0 lg:border-r-2 lg:border-r-primary-gold-light lg:text-right'>
-            <h2 className='pl-2 font-bold text-2xl capitalize lg:text-3xl'>
-              Our mission
-            </h2>
-          </div>
-          <p className='mt-4'>
-            Space Club OAU, as the brain-child of the African Regional Center
-            for Space Science and Technology Education (ARCSSTE), was conceived
-            with the purpose of achieving the &lsquo;Catching them Young&rsquo;
-            Initiative. Based on this, we are driven to continuously indulge in
-            a sustained effort to sensitize, educate, inform and create
-            awareness for students in tetiary institutions in all aspects of
-            Space, Science Technology and Research and its benefits to mankind.
-          </p>
-        </div>
-      </section>
-
-      <section className='mb-28'>
-        <div
-          style={{ backgroundImage: "url(/space1.webp)" }}
-          className='bg-no-repeat bg-cover bg-center py-[10rem]'
-        >
-          <div className='max-w-[50rem] mx-auto p-4 text-center text-white'>
-            <span>What do we hope to achieve?</span>
-            <h2 className='mt-4 mb-2 text-3xl'>Our Aims and Objectives</h2>
-            <p>
-              At Space Club, we are continuously driven to deliver impactful
-              experiences that facilitate growth and development to all
-              concerned.
-            </p>
-          </div>
-        </div>
-
-        <div className='max-w-[77.5rem] mx-auto -mt-[10rem] p-4 sm:grid sm:grid-cols-2 sm:gap-6 lg:grid-cols-6'>
-          {aimsAndObjectives.map((aim, i) => (
-            <InfoCard
-              key={i}
-              cardTitle={aim.title}
-              cardText={aim.desc}
-              cardIndex={i}
-              className={i > 2 ? "lg:col-span-3" : "lg:col-span-2"}
-            />
-          ))}
-        </div>
-      </section>
-
-      <section className='bg-primary-dark text-white'>
-        <div className='max-w-[77.5rem] mx-auto p-4 py-[5.5rem] grid gap-6 text-base sm:grid-cols-2 xl:grid-cols-4'>
-          <p className='my-4 text-2xl text-center sm:col-span-full'>
-            not just space enthusiasts, we are{" "}
-            <span className='font-bold'>THE</span> Commmunity!
-          </p>
-
-          <div className='flex flex-col items-center gap-3 border border-primary-gold-light p-10 xl:px-7'>
-            <h3 className='font-bold text-center text-5xl'>
-              11 <span className='block text-lg'>Divisions</span>
-            </h3>
-            <p className='text-center'>
-              From Rocketry, Space Policy and Law to Software Engineering,
-              Drones and General Aviation Systems, there are multiple divisions
-              you could join depending on your interests.
-            </p>
-          </div>
-
-          <div className='flex flex-col items-center gap-3 border border-primary-gold-light p-10 xl:px-7'>
-            <h3 className='font-bold text-center text-5xl'>
-              50+ <span className='block text-lg'>Intellectuals</span>
-            </h3>
-            <p className='text-center'>
-              With over 50 Intellectuals from different fields, knowledge
-              acquisition and exchange happens consistently in a relaxed and
-              fulfilling atmosphere.
-            </p>
-          </div>
-
-          <div className='flex flex-col items-center gap-3 border border-primary-gold-light p-10 xl:px-7'>
-            <h3 className='font-bold text-center text-5xl'>
-              5+ <span className='block text-lg'>Disciplines</span>
-            </h3>
-            <p className='text-center'>
-              In Space Club, there is space for everyone. We are spread out
-              across different disciplines, from STEM to Social Sciences and
-              even the Arts. There is definitely enough space for you.
-            </p>
-          </div>
-
-          <div className='flex flex-col items-center gap-3 border border-primary-gold-light p-10 xl:px-7'>
-            <h3 className='font-bold text-center text-5xl'>
-              75+ <span className='block text-lg'>Professionals</span>
-            </h3>
-            <p className='text-center'>
-              Space Club members possess a variety of professional skillsets
-              through which many have built and are building a career. There are
-              no idle hands in Space Club as we are a focused and committed
-              group on individuals.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className='mb-28'>
-        <div
-          style={{ backgroundImage: "url(/space1.jpg)" }}
-          className='bg-no-repeat bg-cover bg-center py-[10rem]'
-        >
-          <div className='max-w-[50rem] mx-auto p-4 text-center text-white'>
-            <span>Why should you join Space Club? What do you gain?</span>
-            <h2 className='mt-4 mb-2 text-3xl'>The Benefits</h2>
-            <p>
-              By joining Space Club, you become a part of the family of
-              visionary individuals interested in facilitating your growth and
-              exploring your hidden potential.
-            </p>
-          </div>
-        </div>
-
-        <div className='max-w-[77.5rem] mx-auto -mt-[10rem] p-4 sm:grid sm:grid-cols-2 sm:gap-6 lg:grid-cols-6'>
-          {benefits.map((aim, i) => (
-            <InfoCard
-              key={i}
-              cardTitle={aim.title}
-              cardText={aim.desc}
-              cardIndex={i}
-              className={i > 2 ? "lg:col-span-3" : "lg:col-span-2"}
-            />
-          ))}
-        </div>
-      </section>
-
-      <section className='max-w-[45rem] mx-auto py-28 px-5 flex flex-col gap-2 items-center justify-center bg-primary-dark text-white md:mb-28 md:py-20 md:px-10'>
-        <p className='mb-6 p-5 border-y border-y-primary-gold-dark text-3xl text-center leading-10 md:px-10 md:max-w-[70%] md:mx-auto'>
-          Ready to join? <br />
-          Become a member of Space Club OAU today.
-        </p>
-
-        <Link
-          href='/contact'
-          className='w-[10rem] h-12 flex items-center justify-center bg-primary-gold-light uppercase font-medium text-center'
-        >
-          Reach Out
-        </Link>
-      </section>
+      <Hero />
+      <About />
+      <AimsAndObjectives aimsAndObjectives={aimsAndObjectives} />
+      <Features />
+      <Benefits benefits={benefits} />
+      <Contact />
     </MainLayout>
   );
 }
