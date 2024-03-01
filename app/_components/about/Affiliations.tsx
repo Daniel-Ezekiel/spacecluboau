@@ -20,7 +20,7 @@ export default function Affiliations() {
           </div>
           <div className='aspect-video flex items-center justify-center'>
             <Image
-              src='/seds.png'
+              src='/seds.webp'
               height={300}
               width={300}
               alt='SGAC logo'

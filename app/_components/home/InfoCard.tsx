@@ -4,17 +4,13 @@ import React from "react";
 type CardProps = {
   cardTitle: string;
   cardText: string;
-  cardIndex: number;
-  //   cardSpan: number;
-  className: string;
+  className?: string;
 };
 
 export default function InfoCard({
   cardTitle,
   cardText,
-  //   cardSpan,
   className,
-  cardIndex,
 }: CardProps) {
   return (
     <div

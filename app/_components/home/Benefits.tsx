@@ -28,7 +28,6 @@ export default function Benefits({ benefits }: { benefits: aimsProps[] }) {
             key={i}
             cardTitle={aim.title}
             cardText={aim.desc}
-            cardIndex={i}
             className={i > 2 ? "lg:col-span-3" : "lg:col-span-2"}
           />
         ))}

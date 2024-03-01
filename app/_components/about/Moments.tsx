@@ -4,49 +4,41 @@ import SectionTitle from "../global/SectionTitle";
 const moments: { id: number; info: string }[] = [
   {
     id: 1,
-    info: "We hosted the first SpaceVision Conference in Africa.",
+    info: "We hosted the first SpaceVision Conference in Africa in affiliation with SEDS.",
   },
   {
     id: 2,
-    info: "We hosted the first SpaceVision Conference in Africa.",
+    info: "Our team won the NASA Space Apps Nigeria hackathon in Lagos, 2018.",
   },
   {
     id: 3,
-    info: "We hosted the first SpaceVision Conference in Africa.",
+    info: "Three start-up companies have originated from Space Club OAU including Flux(Blueloop) and AirSync. ",
   },
   {
     id: 4,
-    info: "We hosted the first SpaceVision Conference in Africa.",
+    info: "Space Club OAU has some of best CAD developers in OAU and Nigeria.",
   },
   {
     id: 5,
-    info: "We hosted the first SpaceVision Conference in Africa.",
+    info: "Space Club OAU has also budded exceptional Software Engineers and Product Designers, arguably the best in OAU and Nigeria.",
   },
   {
     id: 6,
-    info: "We hosted the first SpaceVision Conference in Africa.",
+    info: "Here at Space Club, we have built over 10 drones with over 150 successful flights.",
   },
   {
     id: 7,
-    info: "We hosted the first SpaceVision Conference in Africa.",
+    info: "We are affiliated with several overseas Universities through SEDS and SGAC where we collaborate on projects.",
   },
   {
     id: 8,
-    info: "We hosted the first SpaceVision Conference in Africa.",
-  },
-  {
-    id: 9,
-    info: "We hosted the first SpaceVision Conference in Africa.",
-  },
-  {
-    id: 10,
-    info: "We hosted the first SpaceVision Conference in Africa.",
+    info: "As a member of the SGAC, we are proudly Nigeria's most active Student Club on Space Science and Technology.",
   },
 ];
 
 export default function Moments() {
   return (
-    <section className='p-4 py-20 bg-black text-white'>
+    <section className='mb-28 p-4 py-20 bg-black text-white'>
       <div className='max-w-[70.5rem] mx-auto'>
         <div>
           <SectionTitle title='Notable Moments in our History' />
@@ -57,7 +49,7 @@ export default function Moments() {
         </div>
 
         <div className='mt-12 md:mt-16'>
-          <ul className='pl-8 list-disc flex flex-col gap-3 sm:grid sm:grid-cols-2 sm:gap-6 sm:gap-x-10'>
+          <ul className='pl-8 list-disc flex flex-col gap-3 sm:grid sm:grid-cols-2 sm:gap-6 sm:gap-x-10 xl:gap-x-24'>
             {moments.map((moment) => (
               <li key={moment.id}>{moment.info}</li>
             ))}
