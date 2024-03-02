@@ -7,19 +7,21 @@ import {
   IoMail,
 } from "react-icons/io5";
 import SectionTitle from "../global/SectionTitle";
+import { ContactForm } from "./Form";
 
 export default function Contact() {
   return (
     <section
       style={{ backgroundImage: 'url("/space_club_oau_cover.jpg")' }}
-      className='py-20 bg-cover bg-center, bg-no-repeat text-white relative before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-black before:bg-opacity-40'
+      className='py-20 bg-cover bg-center bg-no-repeat text-white relative before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-black before:bg-opacity-60'
     >
-      <div className='relative max-w-[77.5rem] mx-auto p-4 z-10'>
+      <div className='relative max-w-[70rem] mx-auto p-4 grid z-10 md:grid-cols-2 md:gap-12'>
         <SectionTitle
           className='font-medium text-3xl text-center after:bg-transparent'
           title='Connect with us Anytime, Anywhere.'
         />
-        <div className='mt-8'>
+
+        <div className='mt-12'>
           <ul className='flex flex-col gap-3'>
             <li>
               <a
@@ -42,7 +44,7 @@ export default function Contact() {
               </a>
             </li>
 
-            <div className='mt-6 flex items-center justify-center gap-4 md:justify-start'>
+            <div className='mt-6 flex gap-4 md:justify-start'>
               <a
                 href='https://www.linkedin.com/in/spaceclub-oau?trk=contact-info'
                 className='hover:animate-pulse'
@@ -65,8 +67,9 @@ export default function Contact() {
             </div>
           </ul>
         </div>
-        <div>
-          <form action=''></form>
+
+        <div className='row-start-2 mt-10 md:col-start-2 md:mt-0'>
+          <ContactForm />
         </div>
       </div>
     </section>

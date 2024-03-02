@@ -5,7 +5,7 @@ export default function TopSection() {
   return (
     <section className='max-w-[70rem] mx-auto py-24'>
       <SectionTitle title='Get in Touch' />
-      <p className='max-w-[45rem] mx-auto mt-12 text-center'>
+      <p className='max-w-[45rem] mx-auto mt-12 p-4 text-center'>
         If you want to learn about Space, its exploration, current news about
         Space or even Drones, General Aviation and Rocketry.
         <br />
