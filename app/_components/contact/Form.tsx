@@ -84,9 +84,7 @@ export const ContactForm = () => (
             name='message'
             as='textarea'
             className='mt-2 p-2 h-[15rem] rounded-sm bg-transparent border'
-          >
-            <textarea name='message' id='message'></textarea>
-          </Field>
+          />
           {errors.message && touched.message ? (
             <div className='mt-2 text-sm text-red-500 '>{errors.email}</div>
           ) : null}
