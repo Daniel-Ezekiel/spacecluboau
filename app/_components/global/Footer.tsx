@@ -33,7 +33,7 @@ export default function Footer() {
 
         <section className='row-start-1 flex flex-col gap-3 md:col-span-full lg:col-span-3 lg:col-start-2 lg:items-center'>
           <h2 className='flex items-center gap-4'>
-            <Image src={"/logo-white.png"} width={32} height={32} alt='Logo' />
+            <Image src={"/logo-white.webp"} width={32} height={32} alt='Logo' />
             <span className='uppercase font-bold tracking-wider'>
               spacecluboau
             </span>

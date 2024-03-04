@@ -11,7 +11,7 @@ export default function Affiliations() {
         <div className='mt-12 md:mt-16 px-10 grid place-items-center gap-8 sm:grid-cols-2 md:grid-cols-3 md:px-0'>
           <div className='aspect-video flex items-center justify-center'>
             <Image
-              src='/sgac.jpg'
+              src='/sgac.webp'
               height={300}
               width={300}
               alt='SGAC logo'

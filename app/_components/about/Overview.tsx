@@ -27,7 +27,7 @@ export default function Overview() {
       </p>
       <div className='row-start-2 mt-6 aspect-video flex items-center justify-center w-full h-[8rem] bg-black py-8 rounded-md md:col-start-2 md:h-full lg:rounded-tr-full lg:rounded-br-full'>
         <Image
-          src={"/logo-white.png"}
+          src={"/logo-white.webp"}
           width={100}
           height={100}
           alt='Space Club OAU logo'

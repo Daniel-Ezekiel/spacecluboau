@@ -12,7 +12,7 @@ import { ContactForm } from "./Form";
 export default function Contact() {
   return (
     <section
-      style={{ backgroundImage: 'url("/space_club_oau_cover.jpg")' }}
+      style={{ backgroundImage: 'url("/bg-contact.webp")' }}
       className='py-20 bg-cover bg-center bg-no-repeat text-white relative before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-black before:bg-opacity-60'
     >
       <div className='relative max-w-[70rem] mx-auto p-4 grid z-10 md:grid-cols-2 md:gap-12'>

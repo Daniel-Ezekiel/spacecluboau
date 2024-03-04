@@ -12,7 +12,7 @@ export default function Header() {
     <header className='bg-primary-dark'>
       <nav className='max-w-[77.5rem] mx-auto p-4 flex justify-between items-center text-white'>
         <Link href='/' className='flex items-center font-manrope'>
-          <Image src={"/logo-white.png"} width={32} height={32} alt='Logo' />
+          <Image src={"/logo-white.webp"} width={32} height={32} alt='Logo' />
           <span className='uppercase font-bold tracking-wider'>
             spacecluboau
           </span>
@@ -21,7 +21,7 @@ export default function Header() {
         <ul
           className={`fixed ${
             showNav ? "right-0" : "right-[-100%]"
-          } top-[4.5rem] p-4 pl-8 z-30 flex flex-col gap-4 w-[65dvw] h-screen bg-black bg-opacity-20 backdrop-blur transition-all ease-in-out duration-500 shadow-2xl lg:static lg:w-fit lg:h-fit lg:ml-auto lg:flex-row lg:gap-12 lg:bg-transparent lg:shadow-none lg:p-0`}
+          } top-[0] p-4 pt-[5rem] pl-8 z-30 flex flex-col gap-4 w-[65dvw] h-screen bg-black bg-opacity-20 backdrop-blur transition-all ease-in-out duration-300 shadow-2xl overflow-hidden lg:static lg:w-fit lg:h-fit lg:ml-auto lg:flex-row lg:gap-12 lg:bg-transparent lg:shadow-none lg:p-0`}
         >
           <li className='py-2'>
             <Link href='/'>Home</Link>
@@ -44,7 +44,9 @@ export default function Header() {
 
           <Button
             onClick={() => setShowNav(!showNav)}
-            className='p-0 z-30 active:scale-90 lg:hidden transition-transform ease-in-out duration-100'
+            className={`w-8 h-8 p-0 z-30 active:scale-90 lg:hidden transition-transform ease-in-out duration-100 ${
+              showNav && "fixed top-4 right-4 bg-none"
+            } transition-all ease duration-300`}
           >
             {!showNav ? (
               <IoMenuOutline size={28} />

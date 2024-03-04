@@ -3,7 +3,7 @@ import React from "react";
 export default function Hero() {
   return (
     <div
-      style={{ backgroundImage: "url('/space2.jpg')" }}
+      style={{ backgroundImage: "url('/bg-hero.webp')" }}
       className='relative pt-[15rem] bg-no-repeat bg-cover bg-center before:absolute before:top-0 before:left-0 before:h-full before:w-full before:bg-black before:bg-opacity-40'
     >
       <section className='relative p-4 pt-[8rem] pb-[8rem] max-w-[75rem] h-full mx-auto z-10 text-white'>

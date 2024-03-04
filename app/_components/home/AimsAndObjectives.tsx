@@ -10,7 +10,7 @@ export default function AimsAndObjectives({
   return (
     <section className='mb-28'>
       <div
-        style={{ backgroundImage: "url(/space1.webp)" }}
+        style={{ backgroundImage: "url(/bg-aims.webp)" }}
         className='bg-no-repeat bg-cover bg-center py-[10rem]'
       >
         <div className='max-w-[50rem] mx-auto p-4 text-center text-white'>
