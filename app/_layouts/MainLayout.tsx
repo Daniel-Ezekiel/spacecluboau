@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useLayoutEffect } from "react";
 import Header from "../_components/global/Header";
 import Footer from "../_components/global/Footer";
 import { NavContext } from "@/context/navContext";
@@ -15,9 +15,13 @@ export default function MainLayout({
     showNav ? setShowNav(false) : setShowNav(true);
   };
 
-  showNav
-    ? (document.body.style.overflow = "hidden")
-    : (document.body.style.overflow = "unset");
+  useLayoutEffect(() => {
+    document.body.style.overflow = showNav ? "hidden" : "unset";
+
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [showNav]);
 
   return (
     <NavContext.Provider value={{ navState: showNav, updateShowNav }}>
