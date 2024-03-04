@@ -24,9 +24,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <head>
-        <link rel='icon' href='/logo-white.webp' />
-      </head>
       <body className='max-w-screen font-manrope md:text-lg'>{children}</body>
     </html>
   );

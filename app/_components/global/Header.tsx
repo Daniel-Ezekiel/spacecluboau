@@ -1,12 +1,13 @@
 "use client";
 import { Button } from "@/components/ui/button";
+import { NavContext } from "@/context/navContext";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useContext } from "react";
 import { IoCloseOutline, IoMenuOutline } from "react-icons/io5";
 
 export default function Header() {
-  const [showNav, setShowNav] = React.useState(false);
+  const showNav = useContext(NavContext);
 
   return (
     <header className='bg-primary-dark'>
@@ -20,16 +21,16 @@ export default function Header() {
 
         <ul
           className={`fixed ${
-            showNav ? "right-0" : "right-[-100%]"
-          } top-[0] p-4 pt-[5rem] pl-8 z-30 flex flex-col gap-4 w-[65dvw] h-screen bg-black bg-opacity-20 backdrop-blur transition-all ease-in-out duration-300 shadow-2xl overflow-hidden lg:static lg:w-fit lg:h-fit lg:ml-auto lg:flex-row lg:gap-12 lg:bg-transparent lg:shadow-none lg:p-0`}
+            showNav?.navState ? "right-0" : "right-[-100%]"
+          } top-[0] p-4 pt-[5rem] pl-8 z-30 flex flex-col gap-4 w-[100dvw] h-screen bg-black bg-opacity-20 backdrop-blur transition-all ease-in-out duration-300 shadow-2xl lg:static lg:w-fit lg:h-fit lg:ml-auto lg:flex-row lg:gap-12 lg:bg-transparent lg:shadow-none lg:p-0`}
         >
-          <li className='py-2'>
+          <li className='py-2 text-right'>
             <Link href='/'>Home</Link>
           </li>
-          <li className='py-2'>
+          <li className='py-2 text-right'>
             <Link href='/about'>About</Link>
           </li>
-          <li className='py-2'>
+          <li className='py-2 text-right'>
             <Link href='/contact'>Contact</Link>
           </li>
         </ul>
@@ -43,12 +44,12 @@ export default function Header() {
           </Link>
 
           <Button
-            onClick={() => setShowNav(!showNav)}
+            onClick={() => showNav?.updateShowNav()}
             className={`w-8 h-8 p-0 z-30 active:scale-90 lg:hidden transition-transform ease-in-out duration-100 ${
-              showNav && "fixed top-4 right-4 bg-none"
+              showNav?.navState && "fixed top-4 right-4 bg-none"
             } transition-all ease duration-300`}
           >
-            {!showNav ? (
+            {!showNav?.navState ? (
               <IoMenuOutline size={28} />
             ) : (
               <IoCloseOutline size={28} />
