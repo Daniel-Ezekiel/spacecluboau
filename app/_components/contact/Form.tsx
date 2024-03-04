@@ -14,7 +14,7 @@ const SignupSchema = Yup.object().shape({
     .max(11, "Invalid Phone number")
     .required("This field is required"),
   message: Yup.string()
-    .min(10, "Too Short!")
+    .min(20, "Too Short!")
     .required("This field is required"),
   email: Yup.string().email("Invalid email").required("This field is required"),
 });
@@ -41,11 +41,11 @@ export const ContactForm = () => (
           </label>
           <Field
             name='firstName'
-            className='mt-2 p-2 rounded-sm bg-transparent border'
+            className='mt-1 p-2 rounded-sm bg-transparent border'
           />
-          {errors.firstName && touched.firstName ? (
-            <div className='mt-2 text-sm text-red-500'>{errors.firstName}</div>
-          ) : null}
+          <div className='h-5 mt-2 text-sm text-red-500'>
+            {errors.firstName && touched.firstName ? errors.firstName : null}
+          </div>
         </div>
 
         <div className='w-full flex flex-col'>
@@ -55,11 +55,11 @@ export const ContactForm = () => (
           <Field
             name='phone'
             type='number'
-            className='mt-2 p-2 rounded-sm bg-transparent border'
+            className='mt-1 p-2 rounded-sm bg-transparent border'
           />
-          {errors.phone && touched.phone ? (
-            <div className='mt-2 text-sm text-red-500 '>{errors.phone}</div>
-          ) : null}
+          <div className='h-5 mt-2 text-sm text-red-500'>
+            {errors.phone && touched.phone ? errors.phone : null}
+          </div>
         </div>
 
         <div className='w-full flex flex-col sm:col-span-full'>
@@ -69,11 +69,11 @@ export const ContactForm = () => (
           <Field
             name='email'
             type='email'
-            className='mt-2 p-2 rounded-sm bg-transparent border'
+            className='mt-1 p-2 rounded-sm bg-transparent border'
           />
-          {errors.email && touched.email ? (
-            <div className='mt-2 text-sm text-red-500 '>{errors.email}</div>
-          ) : null}
+          <div className='h-5 mt-2 text-sm text-red-500'>
+            {errors.email && touched.email ? errors.email : null}
+          </div>
         </div>
 
         <div className='w-full flex flex-col sm:col-span-full'>
@@ -83,11 +83,11 @@ export const ContactForm = () => (
           <Field
             name='message'
             as='textarea'
-            className='mt-2 p-2 h-[15rem] rounded-sm bg-transparent border'
+            className='mt-1 p-2 h-[15rem] rounded-sm bg-transparent border'
           />
-          {errors.message && touched.message ? (
-            <div className='mt-2 text-sm text-red-500 '>{errors.email}</div>
-          ) : null}
+          <div className='h-5 mt-2 text-sm text-red-500'>
+            {errors.message && touched.message ? errors.message : null}
+          </div>
         </div>
 
         <button
