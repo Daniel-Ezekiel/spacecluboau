@@ -48,6 +48,7 @@ export default function Header() {
             className={`w-8 h-8 p-0 z-30 active:scale-90 lg:hidden transition-transform ease-in-out duration-100 ${
               showNav?.navState && "fixed top-4 right-4 bg-none"
             } transition-all ease duration-300`}
+            aria-label='menu'
           >
             {!showNav?.navState ? (
               <IoMenuOutline size={28} />

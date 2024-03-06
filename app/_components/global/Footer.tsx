@@ -53,7 +53,7 @@ export default function Footer() {
           <ul className='flex flex-col gap-3 lg:items-end'>
             <li>
               <a
-                href='http://'
+                href='https://maps.app.goo.gl/FXDHDGXfLnL2AdM96'
                 className='flex items-center gap-2'
                 target='_blank'
               >
@@ -72,16 +72,20 @@ export default function Footer() {
               </a>
             </li>
 
-            <div className='mt-6 flex items-center justify-center gap-4 md:justify-start'>
+            <li className='mt-6 flex items-center justify-center gap-4 md:justify-start'>
               <a
                 href='https://www.linkedin.com/in/spaceclub-oau?trk=contact-info'
+                target='_blank'
                 className='hover:animate-pulse'
+                aria-label='space-club-linkedin'
               >
                 <IoLogoLinkedin size={28} />
               </a>
               <a
                 href='https://instagram.com/spaceclub_oau'
+                target='_blank'
                 className='hover:animate-pulse'
+                aria-label='space-club-instagram'
               >
                 <IoLogoInstagram size={28} />
               </a>
@@ -89,10 +93,11 @@ export default function Footer() {
                 href='https://x.com/spaceclub_oau'
                 target='_blank'
                 className='hover:animate-pulse'
+                aria-label='space-club-t'
               >
                 <IoLogoTwitter size={28} />
               </a>
-            </div>
+            </li>
           </ul>
         </section>
       </div>
