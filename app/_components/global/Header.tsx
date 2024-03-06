@@ -24,7 +24,7 @@ export default function Header() {
             showNav?.navState
               ? "top-[4.2rem] right-0 z-30"
               : "-top-full right-0 -z-10"
-          } p-4 py-[2.5rem] pl-8 flex flex-col gap-4 w-[100dvw] h-fit bg-black bg-opacity-20 backdrop-blur transition-all ease-in-out duration-300 shadow-2xl lg:static lg:w-fit lg:h-fit lg:ml-auto lg:flex-row lg:gap-12 lg:bg-transparent lg:shadow-none lg:p-0`}
+          } p-4 py-[2.5rem] pl-8 flex flex-col gap-4 w-[100dvw] h-fit bg-black bg-opacity-20 backdrop-blur transition-all ease-in-out duration-300 shadow-2xl lg:static lg:w-fit lg:h-fit lg:ml-auto lg:flex-row lg:gap-12 lg:bg-transparent lg:shadow-none lg:p-0 lg:z-30`}
         >
           <li className='py-2 text-right'>
             <Link href='/'>Home</Link>
