@@ -72,7 +72,7 @@ export default function Footer() {
               </a>
             </li>
 
-            <li className='mt-6 flex items-center justify-center gap-4 md:justify-start'>
+            <li className='mt-6 flex items-center gap-4 md:justify-start'>
               <a
                 href='https://www.linkedin.com/in/spaceclub-oau?trk=contact-info'
                 target='_blank'

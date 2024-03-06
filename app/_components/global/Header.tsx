@@ -21,8 +21,10 @@ export default function Header() {
 
         <ul
           className={`fixed ${
-            showNav?.navState ? "right-0" : "right-[-100%]"
-          } top-[0] p-4 pt-[5rem] pl-8 z-30 flex flex-col gap-4 w-[100dvw] h-screen bg-black bg-opacity-20 backdrop-blur transition-all ease-in-out duration-300 shadow-2xl lg:static lg:w-fit lg:h-fit lg:ml-auto lg:flex-row lg:gap-12 lg:bg-transparent lg:shadow-none lg:p-0`}
+            showNav?.navState
+              ? "top-[4.2rem] right-0 z-30"
+              : "-top-full right-0 -z-10"
+          } p-4 py-[2.5rem] pl-8 flex flex-col gap-4 w-[100dvw] h-fit bg-black bg-opacity-20 backdrop-blur transition-all ease-in-out duration-300 shadow-2xl lg:static lg:w-fit lg:h-fit lg:ml-auto lg:flex-row lg:gap-12 lg:bg-transparent lg:shadow-none lg:p-0`}
         >
           <li className='py-2 text-right'>
             <Link href='/'>Home</Link>
@@ -45,9 +47,7 @@ export default function Header() {
 
           <Button
             onClick={() => showNav?.updateShowNav()}
-            className={`w-8 h-8 p-0 z-30 active:scale-90 lg:hidden transition-transform ease-in-out duration-100 ${
-              showNav?.navState && "fixed top-4 right-4 bg-none"
-            } transition-all ease duration-300`}
+            className={`w-8 h-8 p-0 z-30 active:scale-90 lg:hidden transition-all ease duration-300`}
             aria-label='menu'
           >
             {!showNav?.navState ? (
