@@ -31,6 +31,19 @@ const visions: { id: number; title: string; desc: string }[] = [
 ];
 
 export default function VisionForYou() {
+  // const container = {
+  //   show: {
+  //     transition: {
+  //       staggerChildren: 0.5,
+  //     },
+  //   },
+  // };
+
+  const item = {
+    hidden: { opacity: 0, translateY: 25 },
+    show: { opacity: 1, translateY: 0 },
+  };
+
   return (
     <section className='mb-28'>
       <div
@@ -54,6 +67,7 @@ export default function VisionForYou() {
             key={vision.id}
             cardTitle={vision.title}
             cardText={vision.desc}
+            cardVariants={item}
             className={vision.id > 3 ? "lg:col-span-3" : "lg:col-span-2"}
           />
         ))}
