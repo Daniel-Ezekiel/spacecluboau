@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
 import InfoCard from "./InfoCard";
 import { aimsProps } from "@/app/_types/types";
 
@@ -7,19 +9,39 @@ export default function AimsAndObjectives({
 }: {
   aimsAndObjectives: aimsProps[];
 }) {
+  const container = {
+    show: {
+      transition: {
+        staggerChildren: 0.5,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, translateY: 25 },
+    show: { opacity: 1, translateY: 0 },
+  };
+
   return (
-    <section className='mb-28'>
+    <motion.section
+      className='mb-28'
+      variants={container}
+      initial='hidden'
+      whileInView='show'
+    >
       <div
         style={{ backgroundImage: "url(/bg-aims.webp)" }}
         className='bg-no-repeat bg-cover bg-center py-[10rem]'
       >
         <div className='max-w-[50rem] mx-auto p-4 text-center text-white'>
-          <span>What do we hope to achieve?</span>
-          <h2 className='mt-4 mb-2 text-3xl'>Our Aims and Objectives</h2>
-          <p>
+          <motion.span variants={item}>What do we hope to achieve?</motion.span>
+          <motion.h2 className='mt-4 mb-2 text-3xl' variants={item}>
+            Our Aims and Objectives
+          </motion.h2>
+          <motion.p variants={item}>
             At Space Club, we are continuously driven to deliver impactful
             experiences that facilitate growth and development to all concerned.
-          </p>
+          </motion.p>
         </div>
       </div>
 
@@ -29,10 +51,11 @@ export default function AimsAndObjectives({
             key={i}
             cardTitle={aim.title}
             cardText={aim.desc}
+            cardVariants={item}
             className={i > 2 ? "lg:col-span-3" : "lg:col-span-2"}
           />
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 }
