@@ -25,10 +25,12 @@ export default function Features() {
         variants={container}
         initial='hidden'
         whileInView='show'
+        viewport={{ once: true }}
       >
         <motion.p
           className='my-4 text-2xl text-center sm:col-span-full'
           variants={item}
+          viewport={{ once: true }}
         >
           not just space enthusiasts, we are{" "}
           <span className='font-bold'>THE</span> Commmunity!
@@ -37,6 +39,7 @@ export default function Features() {
         <motion.div
           className='flex flex-col items-center gap-3 border border-primary-gold-light p-10 xl:px-7'
           variants={item}
+          viewport={{ once: true }}
         >
           <h3 className='font-bold text-center text-5xl'>
             11 <span className='block text-lg'>Divisions</span>
@@ -51,6 +54,7 @@ export default function Features() {
         <motion.div
           className='flex flex-col items-center gap-3 border border-primary-gold-light p-10 xl:px-7'
           variants={item}
+          viewport={{ once: true }}
         >
           <h3 className='font-bold text-center text-5xl'>
             50+ <span className='block text-lg'>Intellectuals</span>
@@ -65,6 +69,7 @@ export default function Features() {
         <motion.div
           className='flex flex-col items-center gap-3 border border-primary-gold-light p-10 xl:px-7'
           variants={item}
+          viewport={{ once: true }}
         >
           <h3 className='font-bold text-center text-5xl'>
             5+ <span className='block text-lg'>Disciplines</span>
@@ -79,6 +84,7 @@ export default function Features() {
         <motion.div
           className='flex flex-col items-center gap-3 border border-primary-gold-light p-10 xl:px-7'
           variants={item}
+          viewport={{ once: true }}
         >
           <h3 className='font-bold text-center text-5xl'>
             75+ <span className='block text-lg'>Professionals</span>

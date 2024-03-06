@@ -11,6 +11,7 @@ export default function About() {
           initial={{ opacity: 0, translateX: -40 }}
           whileInView={{ opacity: 1, translateX: 0 }}
           transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
         >
           <h2 className='w-full pl-2 font-bold text-2xl capitalize lg:w-[13rem] lg:text-3xl'>
             The Space Club Vision
@@ -21,6 +22,7 @@ export default function About() {
           initial={{ opacity: 0, translateX: 40 }}
           whileInView={{ opacity: 1, translateX: 0 }}
           transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
         >
           Space Club OAU, a Non-Profit established by a group of visionary
           students to promote awareness around Space, Science and
@@ -34,6 +36,7 @@ export default function About() {
         initial={{ opacity: 0, translateY: -20 }}
         whileInView={{ opacity: 1, translateY: 0 }}
         transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
       ></motion.div>
 
       <div className='mt-6 lg:flex lg:flex-row-reverse gap-6'>
@@ -42,6 +45,7 @@ export default function About() {
           initial={{ opacity: 0, translateX: 50 }}
           whileInView={{ opacity: 1, translateX: 0 }}
           transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
         >
           <h2 className='w-fit pl-2 font-bold text-2xl capitalize lg:text-3xl'>
             Our mission
@@ -52,6 +56,7 @@ export default function About() {
           initial={{ opacity: 0, translateX: -50 }}
           whileInView={{ opacity: 1, translateX: 0 }}
           transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
         >
           Space Club OAU, as the brain-child of the African Regional Center for
           Space Science and Technology Education (ARCSSTE), was conceived with

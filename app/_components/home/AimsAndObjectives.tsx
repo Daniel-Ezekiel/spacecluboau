@@ -28,17 +28,24 @@ export default function AimsAndObjectives({
       variants={container}
       initial='hidden'
       whileInView='show'
+      viewport={{ once: true }}
     >
       <div
         style={{ backgroundImage: "url(/bg-aims.webp)" }}
         className='bg-no-repeat bg-cover bg-center py-[10rem]'
       >
         <div className='max-w-[50rem] mx-auto p-4 text-center text-white'>
-          <motion.span variants={item}>What do we hope to achieve?</motion.span>
-          <motion.h2 className='mt-4 mb-2 text-3xl' variants={item}>
+          <motion.span variants={item} viewport={{ once: true }}>
+            What do we hope to achieve?
+          </motion.span>
+          <motion.h2
+            className='mt-4 mb-2 text-3xl'
+            variants={item}
+            viewport={{ once: true }}
+          >
             Our Aims and Objectives
           </motion.h2>
-          <motion.p variants={item}>
+          <motion.p variants={item} viewport={{ once: true }}>
             At Space Club, we are continuously driven to deliver impactful
             experiences that facilitate growth and development to all concerned.
           </motion.p>
