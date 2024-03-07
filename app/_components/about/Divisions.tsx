@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
 import SectionTitle from "../global/SectionTitle";
 
 const divisions: string[] = [
@@ -23,8 +25,16 @@ export default function Divisions() {
 
         <div className='mt-12 md:mt-16'>
           <ul className='pl-8 list-disc flex flex-col gap-3 sm:grid sm:grid-cols-2 sm:gap-6 sm:gap-x-10'>
-            {divisions.map((division) => (
-              <li key={division}>{division}</li>
+            {divisions.map((division, i) => (
+              <motion.li
+                key={division}
+                initial={{ opacity: 0, translateY: 25 }}
+                whileInView={{ opacity: 1, translateY: 0 }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                viewport={{ once: true }}
+              >
+                {division}
+              </motion.li>
             ))}
           </ul>
         </div>

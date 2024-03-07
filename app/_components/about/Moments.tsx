@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
 import SectionTitle from "../global/SectionTitle";
 
 const moments: { id: number; info: string }[] = [
@@ -42,16 +44,30 @@ export default function Moments() {
       <div className='max-w-[70.5rem] mx-auto'>
         <div>
           <SectionTitle title='Notable Moments in our History' />
-          <p className='max-w-[45rem] mt-10 mx-auto text-center'>
+          <motion.p
+            className='max-w-[45rem] mt-10 mx-auto text-center'
+            initial={{ opacity: 0, translateY: -25 }}
+            whileInView={{ opacity: 1, translateY: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
             Here at Space Club OAU, we have built up quite a reputation. Here
             are some of the moments we have garnered over the years
-          </p>
+          </motion.p>
         </div>
 
         <div className='mt-12 md:mt-16'>
           <ul className='pl-8 list-disc flex flex-col gap-3 sm:grid sm:grid-cols-2 sm:gap-6 sm:gap-x-10 xl:gap-x-24'>
             {moments.map((moment) => (
-              <li key={moment.id}>{moment.info}</li>
+              <motion.li
+                key={moment.id}
+                initial={{ opacity: 0, translateY: 25 }}
+                whileInView={{ opacity: 1, translateY: 0 }}
+                transition={{ duration: 0.5, delay: moment.id * 0.1 }}
+                viewport={{ once: true }}
+              >
+                {moment.info}
+              </motion.li>
             ))}
           </ul>
         </div>
