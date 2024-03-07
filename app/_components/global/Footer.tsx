@@ -80,7 +80,7 @@ export default function Footer() {
 
             <li className='mt-6 flex items-center gap-4 md:justify-start'>
               <a
-                href='https://www.linkedin.com/in/spaceclub-oau?trk=contact-info'
+                href='https://www.linkedin.com/company/spaceclub-oau/'
                 target='_blank'
                 className='hover:animate-pulse'
                 aria-label='space-club-linkedin'
