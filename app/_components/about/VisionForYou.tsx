@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
 import InfoCard from "../home/InfoCard";
 
 const visions: { id: number; title: string; desc: string }[] = [
@@ -31,13 +33,17 @@ const visions: { id: number; title: string; desc: string }[] = [
 ];
 
 export default function VisionForYou() {
-  // const container = {
-  //   show: {
-  //     transition: {
-  //       staggerChildren: 0.5,
-  //     },
-  //   },
-  // };
+  const container = {
+    hidden: {
+      opacity: 0,
+    },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.5,
+      },
+    },
+  };
 
   const item = {
     hidden: { opacity: 0, translateY: 25 },
@@ -50,24 +56,38 @@ export default function VisionForYou() {
         style={{ backgroundImage: "url(/bg-vision.webp)" }}
         className='bg-no-repeat bg-cover bg-center py-[10rem]'
       >
-        <div className='max-w-[50rem] mx-auto p-4 text-center text-white'>
-          <span>What are our plans for you?</span>
-          <h2 className='mt-4 mb-2 text-3xl'>Our Vision for You</h2>
-          <p>
+        <motion.div
+          className='max-w-[50rem] mx-auto p-4 text-center text-white'
+          variants={container}
+          initial='hidden'
+          whileInView='show'
+          viewport={{ once: true }}
+        >
+          <motion.span variants={item} viewport={{ once: true }}>
+            What are our plans for you?
+          </motion.span>
+          <motion.h2
+            className='mt-4 mb-2 text-3xl'
+            variants={item}
+            viewport={{ once: true }}
+          >
+            Our Vision for You
+          </motion.h2>
+          <motion.p variants={item} viewport={{ once: true }}>
             As a Space Club Member, your growth is our top priority. Space Club
             OAU is ready to help you reach your potential and achieve your
             goals.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
       </div>
 
       <div className='max-w-[77.5rem] mx-auto -mt-[10rem] p-4 sm:grid sm:grid-cols-2 sm:gap-6 lg:grid-cols-6'>
-        {visions.map((vision) => (
+        {visions.map((vision, i) => (
           <InfoCard
             key={vision.id}
             cardTitle={vision.title}
             cardText={vision.desc}
-            cardVariants={item}
+            cardIndex={i}
             className={vision.id > 3 ? "lg:col-span-3" : "lg:col-span-2"}
           />
         ))}

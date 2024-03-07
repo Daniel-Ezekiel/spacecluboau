@@ -58,7 +58,7 @@ export default function AimsAndObjectives({
             key={i}
             cardTitle={aim.title}
             cardText={aim.desc}
-            cardVariants={item}
+            cardIndex={i}
             className={i > 2 ? "lg:col-span-3" : "lg:col-span-2"}
           />
         ))}
