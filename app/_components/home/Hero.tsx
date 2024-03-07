@@ -1,6 +1,9 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import { Raleway } from "next/font/google";
+
+const raleway = Raleway({ subsets: ["latin"] });
 
 export default function Hero() {
   return (
@@ -14,7 +17,7 @@ export default function Hero() {
             initial={{ opacity: 0, translateX: -10 }}
             animate={{ opacity: 1, translateX: 0 }}
             transition={{ duration: 0.5 }}
-            className='flex flex-col gap-2 font-raleway font-black text-3xl xl:text-5xl'
+            className={`flex flex-col gap-2 ${raleway.className} font-black text-3xl xl:text-5xl`}
           >
             we are{" "}
             <motion.span

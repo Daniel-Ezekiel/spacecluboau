@@ -1,8 +1,8 @@
+import { Raleway } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import {
-  IoLocate,
   IoLocation,
   IoLogoInstagram,
   IoLogoLinkedin,
@@ -10,12 +10,16 @@ import {
   IoMail,
 } from "react-icons/io5";
 
+const raleway = Raleway({ subsets: ["latin"] });
+
 export default function Footer() {
   return (
     <footer className='bg-primary-dark py-12 leading-6 xl:leading-8'>
       <div className='max-w-[77.5rem] mx-auto p-4 py-10 grid gap-10 text-white md:grid-cols-2 lg:grid-cols-6'>
         <section className='flex flex-col gap-3'>
-          <h2 className='text-primary-gold-light font-raleway font-medium text-xl'>
+          <h2
+            className={`text-primary-gold-light ${raleway.className} font-medium text-xl`}
+          >
             Quick Links
           </h2>
           <ul className='flex flex-col gap-2'>
@@ -47,7 +51,9 @@ export default function Footer() {
         </section>
 
         <section className='flex flex-col gap-3 lg:col-span-2 lg:items-end'>
-          <h2 className='text-primary-gold-light font-raleway font-medium text-xl'>
+          <h2
+            className={`text-primary-gold-light ${raleway.className} font-medium text-xl`}
+          >
             Contact Us
           </h2>
           <ul className='flex flex-col gap-3 lg:items-end'>

@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-// import { Inter } from "next/font/google";
+import { Manrope, Raleway } from "next/font/google";
 import "./globals.css";
 
-// const inter = Inter({ subsets: ["latin"] });
+const manrope = Manrope({ subsets: ["latin"] });
+const raleway = Raleway({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Space Club OAU",
@@ -24,7 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className='max-w-screen font-manrope md:text-lg'>{children}</body>
+      <body className={`max-w-screen ${manrope.className} md:text-lg`}>
+        {children}
+      </body>
     </html>
   );
 }
