@@ -3,7 +3,6 @@ import React, { useLayoutEffect } from "react";
 import Header from "../_components/global/Header";
 import Footer from "../_components/global/Footer";
 import { NavContext } from "@/context/navContext";
-import { motion, AnimatePresence } from "framer-motion";
 
 export default function MainLayout({
   children,
@@ -25,19 +24,12 @@ export default function MainLayout({
   }, [showNav]);
 
   return (
-    <AnimatePresence mode='wait'>
-      <NavContext.Provider value={{ navState: showNav, updateShowNav }}>
-        <motion.div
-          className={`flex flex-col`}
-          // initial={{ opacity: 0 }}
-          // animate={{ opacity: 1 }}
-          // exit={{ opacity: 0 }}
-        >
-          <Header />
-          <main className='flex flex-col'>{children}</main>
-          <Footer />
-        </motion.div>
-      </NavContext.Provider>
-    </AnimatePresence>
+    <NavContext.Provider value={{ navState: showNav, updateShowNav }}>
+      <div className={`flex flex-col`}>
+        <Header />
+        <main className='flex flex-col'>{children}</main>
+        <Footer />
+      </div>
+    </NavContext.Provider>
   );
 }
