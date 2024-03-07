@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
 import {
   IoLocation,
   IoLogoInstagram,
@@ -10,6 +12,11 @@ import SectionTitle from "../global/SectionTitle";
 import { ContactForm } from "./Form";
 
 export default function Contact() {
+  const items = {
+    hidden: { opacity: 0, translateY: -25 },
+    show: { opacity: 1, translateY: 0 },
+  };
+
   return (
     <section
       style={{ backgroundImage: 'url("/bg-contact.webp")' }}
@@ -21,7 +28,14 @@ export default function Contact() {
           title='Connect with us Anytime, Anywhere.'
         />
 
-        <div className='mt-12'>
+        <motion.div
+          className='mt-12'
+          variants={items}
+          initial='hidden'
+          whileInView='show'
+          transition={{ duration: 0.2, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
           <ul className='flex flex-col gap-3'>
             <li>
               <a
@@ -66,11 +80,18 @@ export default function Contact() {
               </a>
             </div>
           </ul>
-        </div>
+        </motion.div>
 
-        <div className='row-start-2 mt-10 md:col-start-2 md:mt-0'>
+        <motion.div
+          className='row-start-2 mt-10 md:col-start-2 md:mt-0'
+          variants={items}
+          initial='hidden'
+          whileInView='show'
+          transition={{ duration: 0.2, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
           <ContactForm />
-        </div>
+        </motion.div>
       </div>
     </section>
   );
