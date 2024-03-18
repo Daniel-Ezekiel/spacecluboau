@@ -1,10 +1,10 @@
 "use client";
+require("dotenv").config();
 import React from "react";
 import { Formik, Form, Field } from "formik";
 import { useForm, ValidationError } from "@formspree/react";
 import * as Yup from "yup";
 import { FORMSPREE_ID } from "@/constants/formspreeId";
-import { useToast } from "@/components/ui/use-toast";
 import {
   Toast,
   ToastDescription,
@@ -36,7 +36,6 @@ const SignupSchema = Yup.object().shape({
 });
 
 export const ContactForm = () => {
-  // const { toast } = useToast();
   const [openToast, setOpenToast] = React.useState(false);
   const timerRef = React.useRef(0);
   const [state, handleSubmit] = useForm(FORMSPREE_ID);
