@@ -1,5 +1,4 @@
 "use client";
-require("dotenv").config();
 import React from "react";
 import { Formik, Form, Field } from "formik";
 import { useForm, ValidationError } from "@formspree/react";
