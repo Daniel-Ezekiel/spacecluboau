@@ -67,6 +67,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
+      <head>
+        <meta
+          name='google-site-verification'
+          content='7xc244oXRaeaF5cjkBK6aACXunf079AGOG7fn2LijD0'
+        />
+      </head>
       <body className={`max-w-screen ${manrope.className} md:text-lg`}>
         {children}
       </body>
