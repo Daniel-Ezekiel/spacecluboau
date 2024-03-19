@@ -5,10 +5,19 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
-
- <url><loc >http://spacecluboau.vercel.app/</loc></url>
- <url><loc>http://spacecluboau.vercel.app/about</loc></url>
- <url><loc>http://spacecluboau.vercel.app/contact</loc></url>
+      <url>
+            <loc>https://spacecluboau.vercel.app/</loc>
+            <lastmod>2024-03-19T11:30:04+00:00</lastmod>
+            <priority>1.00</priority>
+      </url>
+      <url>
+            <loc>https://spacecluboau.vercel.app/about</loc>
+            <lastmod>2024-03-19T11:30:04+00:00</lastmod>
+            <priority>0.54</priority>
+      </url>
+      <url>
+            <loc>https://spacecluboau.vercel.app/contact</loc>
+            <lastmod>2024-03-19T11:30:04+00:00</lastmod>
+            <priority>0.54</priority>
+      </url>
 </urlset>
